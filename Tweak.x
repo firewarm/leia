@@ -14,7 +14,7 @@
 
 // State of the lightsaber
 BOOL lightsaberOn = false;
-BOOL previousAuthState = false;
+BOOL previousLightsaberState = false;
 BOOL viewAdded = false;
 BOOL openedUp = false;
 
@@ -32,7 +32,8 @@ NSDictionary *bundleDefaults;
 - (void) setAuthenticated:(BOOL)arg1 {
 	%orig;
 
-	previousAuthState = lightsaberOn;
+	// Set the 
+	previousLightsaberState = lightsaberOn;
 
 	// Set the light saber state
 	lightsaberOn = arg1;
@@ -69,10 +70,10 @@ NSDictionary *bundleDefaults;
 			// Create an outer layer view that holds vertical padding
 			self.outerView = [[UIView alloc] initWithFrame:CGRectMake(0, -20,  self.frame.size.width, 80)];
 
-			// Create the new UIView with 0 width so we can animate it out
+			// Create the new UIView with 0 width so we can animate it when the lightsaber opens up
 			self.lightsaberView = [[UIView alloc] initWithFrame:CGRectMake(leiaPadding, 0, 0, 10)];
 
-			// Set the color to red
+			// Set the color to red/whiteish
 			[self.lightsaberView setBackgroundColor:[UIColor colorWithRed:1 green:0.84 blue:0.84 alpha:1]];
 
 			// Add lightsaber to outerView
@@ -83,22 +84,20 @@ NSDictionary *bundleDefaults;
 
 			// Add glow effect.
 			self.lightsaberView.layer.shadowOffset = CGSizeZero;
-
 			self.lightsaberView.layer.shadowColor = [[UIColor colorWithRed:1.0 green:0.0 blue:0.0 alpha:1] CGColor];
-		
 			self.lightsaberView.layer.shadowRadius = 15;
-
 			self.lightsaberView.layer.shadowOpacity = 1;
 		}
 
 		// Check if state changed
 
-		if (previousAuthState != lightsaberOn) {
+		if (previousLightsaberState != lightsaberOn) {
 
 			if (lightsaberOn == true) {
-				// Animate it
+				// Animate the opening
 				[self openLightsaber];
 			} else {
+				// Animate the closing
 				[self closeLightsaber];
 			}
 		}
