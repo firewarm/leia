@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+
+		<!-- Options -->
+		<!-- Start cell group called Options -->
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Options</string>
+		</dict>
+
+		<!-- Enabled switch -->
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>dev.firewarm.leiapreferences</string>
+
+			<key>key</key>
+			<string>leiaEnabled</string>
+
+			<key>label</key>
+			<string>Enable Leia</string>
+		</dict>
+
+		<!-- Respring btn -->
+		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+
+			<key>label</key>
+			<string>Respring to apply changes</string>
+
+			<key>action</key>
+			<string>respring</string>
+		</dict>
+
+
+		<!-- Padding -->
+		<!-- Start cell group called Options -->
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Padding</string>
+		</dict>
+
+		<!-- Padding slider -->
+		<dict>
+			<key>cell</key>
+			<string>PSSliderCell</string>
+
+			<key>default</key>
+			<real>0</real>
+
+			<key>defaults</key>
+			<string>dev.firewarm.leiapreferences</string>
+
+			<key>key</key>
+			<string>leiaPadding</string>
+
+			<key>min</key>
+			<real>0</real>
+
+			<key>max</key>
+			<real>100</real>
+
+			<key>showValue</key>
+			<true/>
+
+			<key>isSegmented</key>
+			<true/>
+
+			<key>segmentCount</key>
+			<integer>20</integer>
+		</dict>
+
+
+		<!-- leiaOpenTime -->
+		<!-- Start cell group called Options -->
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Lightsaber animation time</string>
+		</dict>
+
+		<!-- leiaOpenTime slider -->
+		<dict>
+			<key>cell</key>
+			<string>PSSliderCell</string>
+
+			<key>default</key>
+			<real>0</real>
+
+			<key>defaults</key>
+			<string>dev.firewarm.leiapreferences</string>
+
+			<key>key</key>
+			<string>leiaOpenTime</string>
+
+			<key>min</key>
+			<real>0</real>
+
+			<key>max</key>
+			<real>10</real>
+
+			<key>showValue</key>
+			<true/>
+
+			<key>isSegmented</key>
+			<true/>
+
+			<key>segmentCount</key>
+			<integer>50</integer>
+		</dict>
+
+		<!-- Me, myself and I -->
+		<!-- Start cell group called Options -->
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Me ^/^</string>
+		</dict>
+
+		<!-- Twitter btn -->
+		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+
+			<key>label</key>
+			<string>@firewarm</string>
+
+			<key>action</key>
+			<string>openTwitter</string>
+		</dict>
+
+		<!-- Github btn -->
+		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+
+			<key>label</key>
+			<string>Visit my GitHub</string>
+
+			<key>action</key>
+			<string>openGithub</string>
+		</dict>
+
+		<!-- Donation -->
+		<!-- Start cell group called Donation -->
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>❤</string>
+			<key>footerText</key>
+			<string>All my work is free and open source, if you want to support my work you can do so here ^^</string>
+		</dict>
+
+		<!-- Donate btn -->
+		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+
+			<key>label</key>
+			<string>Donate to me</string>
+
+			<key>action</key>
+			<string>openDonatePage</string>
+		</dict>
+
+	</array>
+	<key>title</key>
+	<string>Leia</string>
+</dict>
+</plist>
